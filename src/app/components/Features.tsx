@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Eye, Zap, Image, Shield, Wallet, Clock, ArrowRight } from "lucide-react";
+import { Link } from "react-router";
 import { Sustainability } from "./Sustainability";
 
 const features = [
@@ -197,17 +198,19 @@ export function Features() {
                 <p className="font-['Inter'] text-lg text-white/70 mb-8 max-w-lg">
                   Join thousands of users already earning. Get your hardware delivered and start monetizing.
                 </p>
-                <motion.a
-                  href="https://ap.adpal.xyz"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-3 rounded-2xl bg-white px-8 py-4 font-['Inter'] text-lg font-bold text-[#1A1A1A] shadow-xl hover:shadow-2xl transition-all"
+                  className="inline-flex"
                 >
-                  <Zap className="w-5 h-5" />
-                  Order Your Case
-                </motion.a>
+                  <Link
+                    to="/pre-order"
+                    className="inline-flex items-center gap-3 rounded-2xl bg-white px-8 py-4 font-['Inter'] text-lg font-bold text-[#1A1A1A] shadow-xl hover:shadow-2xl transition-all"
+                  >
+                    <Zap className="w-5 h-5" />
+                    Order Your Case
+                  </Link>
+                </motion.div>
               </div>
 
               {/* Divider for mobile / Border for desktop */}

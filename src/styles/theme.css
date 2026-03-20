@@ -190,3 +190,40 @@
     line-height: 1.5;
   }
 }
+
+/* Footer disabled link tooltip */
+.footer-disabled:hover .footer-tip {
+  opacity: 1;
+}
+
+/* About page keyword highlights */
+@keyframes gradient-shine {
+  0% { background-position: 100% center; }
+  100% { background-position: -100% center; }
+}
+
+.hl {
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 255, 194, 0.5);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.3s ease;
+}
+
+.group:hover .hl {
+  background: linear-gradient(
+    90deg,
+    #00FFC2 0%,
+    #60EFFF 25%,
+    #A78BFA 50%,
+    #F0ABFC 75%,
+    #00FFC2 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-decoration-color: transparent;
+  animation: gradient-shine 1.2s ease-in-out 2;
+}

@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ExternalLink } from "lucide-react";
+import { Link } from "react-router";
 import logoImage from "@/assets/89d014c4bbe5f9bfe9f2d34d3475fc63288a688a.png";
 
 export function Footer() {
@@ -30,28 +31,36 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="#features"
+                <Link
+                  to="/#features"
                   className="font-['Inter'] text-sm text-white/70 hover:text-[#00FFC2] transition-colors"
                 >
                   Features
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#how-it-works"
+                <Link
+                  to="/#how-it-works"
                   className="font-['Inter'] text-sm text-white/70 hover:text-[#00FFC2] transition-colors"
                 >
                   How It Works
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#earnings"
+                <Link
+                  to="/#earnings"
                   className="font-['Inter'] text-sm text-white/70 hover:text-[#00FFC2] transition-colors"
                 >
                   Earnings
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/download"
+                  className="font-['Inter'] text-sm text-white/70 hover:text-[#00FFC2] transition-colors"
+                >
+                  Download App
+                </Link>
               </li>
             </ul>
           </div>
@@ -73,9 +82,12 @@ export function Footer() {
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </li>
-              <li>
-                <span className="font-['Inter'] text-sm text-white/70">
+              <li className="footer-disabled relative flex w-fit items-center cursor-default">
+                <span className="font-['Inter'] text-sm text-white/40">
                   Analytics
+                </span>
+                <span className="footer-tip pointer-events-none absolute left-full top-1/2 -translate-y-1/2 ml-2 whitespace-nowrap rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-2.5 py-1 text-xs font-semibold text-white/70 opacity-0 transition-opacity">
+                  Coming Soon
                 </span>
               </li>
             </ul>
@@ -87,15 +99,29 @@ export function Footer() {
               RESOURCES
             </h3>
             <ul className="space-y-3">
-              <li>
-                <span className="font-['Inter'] text-sm text-white/70">
+              <li className="footer-disabled relative flex w-fit items-center cursor-default">
+                <span className="font-['Inter'] text-sm text-white/40">
                   Documentation
+                </span>
+                <span className="footer-tip pointer-events-none absolute left-full top-1/2 -translate-y-1/2 ml-2 whitespace-nowrap rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-2.5 py-1 text-xs font-semibold text-white/70 opacity-0 transition-opacity">
+                  Coming Soon
+                </span>
+              </li>
+              <li className="footer-disabled relative flex w-fit items-center cursor-default">
+                <span className="font-['Inter'] text-sm text-white/40">
+                  API Reference
+                </span>
+                <span className="footer-tip pointer-events-none absolute left-full top-1/2 -translate-y-1/2 ml-2 whitespace-nowrap rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-2.5 py-1 text-xs font-semibold text-white/70 opacity-0 transition-opacity">
+                  Coming Soon
                 </span>
               </li>
               <li>
-                <span className="font-['Inter'] text-sm text-white/70">
-                  API Reference
-                </span>
+                <Link
+                  to="/about"
+                  className="font-['Inter'] text-sm text-white/70 hover:text-[#00FFC2] transition-colors"
+                >
+                  About
+                </Link>
               </li>
             </ul>
           </div>
@@ -107,27 +133,25 @@ export function Footer() {
         {/* Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-['Inter'] text-sm text-white/50">
-            © 2026 AdPal. All rights reserved.
+            © 2026 BeeSpire (Hong Kong) Limited. All rights reserved.
           </p>
           
           <div className="flex items-center gap-6">
             <a
-              href="#"
+              href="https://legal.adpal.xyz/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-['Inter'] text-sm text-white/50 hover:text-white transition-colors"
             >
               Privacy
             </a>
             <a
-              href="#"
+              href="https://legal.adpal.xyz/tos"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-['Inter'] text-sm text-white/50 hover:text-white transition-colors"
             >
               Terms
-            </a>
-            <a
-              href="#"
-              className="font-['Inter'] text-sm text-white/50 hover:text-white transition-colors"
-            >
-              Cookies
             </a>
           </div>
         </div>

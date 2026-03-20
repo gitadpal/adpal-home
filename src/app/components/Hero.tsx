@@ -1,24 +1,25 @@
 import { motion } from "motion/react";
 import { ArrowRight, Sparkles, Zap, TrendingUp } from "lucide-react";
+import { Link } from "react-router";
 import hardwareImage from "@/assets/c6876f280fe9d4ba3783bc52cb7f9ebb62dde0b9.png";
 import { useState, useEffect } from "react";
 
 const adCampaigns = [
   {
-    image: "https://images.unsplash.com/photo-1761083042195-9e0e85189e2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3b3Jrc3BhY2UlMjB5ZWxsb3clMjBhY2NlbnRzfGVufDF8fHx8MTc3MzgwMjY1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    brand: "Workspace",
+    image: "https://images.unsplash.com/photo-1708533548050-16703eff12ec?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080",
+    brand: "Abstract",
   },
   {
-    image: "https://images.unsplash.com/photo-1758599543113-9857a0f0681c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzc21hbiUyMHJlZCUyMHN1aXQlMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzczODAyNjU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    brand: "Professional",
+    image: "https://images.unsplash.com/photo-1704140159556-88e2e6177def?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080",
+    brand: "Smoke",
   },
   {
-    image: "https://images.unsplash.com/photo-1766246099181-2055091f8721?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBsaWZlc3R5bGUlMjB5ZWxsb3clMjByZWR8ZW58MXx8fHwxNzczODAyNjU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    brand: "Luxury",
+    image: "https://images.unsplash.com/photo-1760112783563-514867b4c2ed?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080",
+    brand: "Neon",
   },
   {
-    image: "https://images.unsplash.com/photo-1762343937033-b9a3f9fc635b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHlsaXNoJTIwcGVyc29uJTIweWVsbG93JTIwZmFzaGlvbnxlbnwxfHx8fDE3NzM4MDI2NTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    brand: "Fashion",
+    image: "https://images.unsplash.com/photo-1601326420904-32e4818e82d9?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080",
+    brand: "Crimson",
   },
 ];
 
@@ -103,34 +104,36 @@ export function Hero() {
               Premium case with built-in verifiable display technology. Display brand campaigns and earn cryptocurrency while you go about your day.
             </p>
 
-            <motion.a
-              href="https://ap.adpal.xyz"
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.div
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#00FFC2] to-[#00E5AD] px-10 py-5 font-['Inter'] text-lg font-bold text-[#1A1A1A] shadow-2xl shadow-[#00FFC2]/50 transition-all hover:shadow-[#00FFC2]/70 inline-flex items-center justify-center gap-3 mb-12"
+              className="inline-flex mb-12"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-              <span className="relative flex items-center justify-center gap-3">
-                <motion.div
-                  animate={{ 
-                    opacity: [1, 0.3, 1],
-                    scale: [1, 1.15, 1],
-                  }}
-                  transition={{
-                    duration: 1.5,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                  className="flex items-center justify-center"
-                >
-                  <Zap className="w-5 h-5" fill="currentColor" />
-                </motion.div>
-                Pre-Order Now
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </motion.a>
+              <Link
+                to="/pre-order"
+                className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#00FFC2] to-[#00E5AD] px-10 py-5 font-['Inter'] text-lg font-bold text-[#1A1A1A] shadow-2xl shadow-[#00FFC2]/50 transition-all hover:shadow-[#00FFC2]/70 inline-flex items-center justify-center gap-3"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                <span className="relative flex items-center justify-center gap-3">
+                  <motion.div
+                    animate={{
+                      opacity: [1, 0.3, 1],
+                      scale: [1, 1.15, 1],
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                    className="flex items-center justify-center"
+                  >
+                    <Zap className="w-5 h-5" fill="currentColor" />
+                  </motion.div>
+                  Pre-Order Now
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
+            </motion.div>
           </motion.div>
 
           {/* Right column - Product showcase */}
