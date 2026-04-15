@@ -10,6 +10,7 @@ import { Footer } from "./components/Footer";
 import { PreOrder } from "./components/PreOrder";
 import { Download } from "./components/Download";
 import { About } from "./components/About";
+import { Support } from "./components/Support";
 
 function ScrollToHash() {
   const { pathname, hash } = useLocation();
@@ -63,6 +64,7 @@ export default function App() {
           <Route path="/pre-order" element={<PreOrder />} />
           <Route path="/download" element={<Download />} />
           <Route path="/about" element={<About />} />
+          <Route path="/support" element={<Support />} />
         </Routes>
       </div>
     </HelmetProvider>
