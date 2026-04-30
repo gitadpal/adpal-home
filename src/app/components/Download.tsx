@@ -80,11 +80,13 @@ export function Download() {
 
             {/* App Store button */}
             <div className="relative inline-flex flex-col items-center">
-              <span className="mb-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 font-['Inter'] text-xs font-semibold text-white/70">
-                Coming Soon
-              </span>
-              <motion.div
-                className="relative inline-flex items-center gap-4 rounded-2xl bg-gradient-to-r from-[#00FFC2]/50 to-[#00E5AD]/50 px-10 py-5 font-['Inter'] text-lg font-bold text-[#1A1A1A]/50 shadow-2xl shadow-[#00FFC2]/10 cursor-default select-none"
+              <motion.a
+                href="https://apps.apple.com/us/app/adpal/id6761813945"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+                className="relative inline-flex items-center gap-4 rounded-2xl bg-gradient-to-r from-[#00FFC2] to-[#00E5AD] px-10 py-5 font-['Inter'] text-lg font-bold text-[#1A1A1A] shadow-2xl shadow-[#00FFC2]/20 cursor-pointer select-none hover:shadow-[#00FFC2]/40 transition-shadow"
               >
                 <svg
                   className="relative w-8 h-8"
@@ -99,7 +101,7 @@ export function Download() {
                   </span>
                   <span className="text-xl font-bold -mt-0.5">App Store</span>
                 </span>
-              </motion.div>
+              </motion.a>
             </div>
           </motion.div>
 
